@@ -17,7 +17,7 @@
         <table class="table table-bordered" id="order-dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>S.N.</th>
+              <th>**</th>
               <th>Review By</th>
               <th>Product Title</th>
               <th>Review</th>
@@ -29,7 +29,7 @@
           </thead>
           <tfoot>
             <tr>
-              <th>S.N.</th>
+              <th>**</th>
               <th>Review By</th>
               <th>Product Title</th>
               <th>Review</th>

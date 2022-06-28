@@ -11,7 +11,7 @@
     <table class="table table-striped table-hover">
       <thead>
         <tr>
-            <th>S.N.</th>
+            <th>**</th>
             <th>Order No.</th>
             <th>Name</th>
             <th>Email</th>

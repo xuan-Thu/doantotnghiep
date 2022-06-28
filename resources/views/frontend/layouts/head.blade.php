@@ -57,6 +57,23 @@
     margin-left: 0px;
     }
 
-    /*
 </style>
 @stack('styles')
+<!-- <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/css/bootstrap.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/css/css/font-awesome.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/css/css/elegant-icons.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/css/css/plyr.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/css/css/nice-select.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/css/css/owl.carousel.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/css/css/slicknav.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/css/css/style.css')}}">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="{{asset('frontend/js/js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{asset('frontend/js/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('frontend/js/js/player.js')}}"></script>
+<script src="{{asset('frontend/js/js/jquery.nice-select.min.js')}}"></script>
+<script src="{{asset('frontend/js/js/mixitup.min.js')}}"></script>
+<script src="{{asset('frontend/js/js/jquery.slicknav.js')}}"></script>
+<script src="{{asset('frontend/js/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('frontend/js/js/main.js')}}"></script> -->
