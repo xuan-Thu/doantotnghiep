@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Login Page</title>
   @include('backend.layouts.head')
-
 </head>
-
 <body class="bg-gradient-primary">
-
   <div class="container">
-
     <!-- Outer Row -->
     <div class="row justify-content-center">
-
       <div class="col-xl-10 col-lg-12 col-md-9 mt-5">
-
         <div class="card o-hidden border-0 shadow-lg my-5">
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
@@ -43,12 +36,10 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
-
                     </div>
                     <div class="form-group">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
                             <label class="form-check-label" for="remember">
                                 {{ __('Remember Me') }}
                             </label>
@@ -59,7 +50,6 @@
                     </button>
                   </form>
                   <hr>
-
                   <div class="text-center">
                     @if (Route::has('password.request'))
                         <a class="btn btn-link small" href="{{ route('password.request') }}">
@@ -72,11 +62,8 @@
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
-
   </div>
 </body>
 
