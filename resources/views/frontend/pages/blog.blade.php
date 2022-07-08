@@ -1,7 +1,5 @@
 @extends('frontend.layouts.master')
-
 @section('title','Blog Page')
-
 @section('main-content')
     <!-- Breadcrumbs -->
     <div class="breadcrumbs">
@@ -19,7 +17,6 @@
         </div>
     </div>
     <!-- End Breadcrumbs -->
-
     <!-- Start Blog Single -->
     <section class="blog-single shop-blog grid section">
         <div class="container">
@@ -36,7 +33,7 @@
                                         <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> {{$post->created_at->format('d M, Y. D')}}
                                             <span class="float-right">
                                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                                 {{$post->author_info->name ?? 'Anonymous'}}
+                                                {{$post->author_info->name ?? 'Anonymous'}}
                                             </span>
                                         </p>
                                         <a href="{{route('blog.detail',$post->slug)}}" class="title">{{$post->title}}</a>
@@ -82,7 +79,6 @@
                                     </li>
                                     @endforeach
                                 </form>
-
                             </ul>
                         </div>
                         <!--/ End Single Widget -->
@@ -159,5 +155,4 @@
             display:inline-flex;
         }
     </style>
-
 @endpush

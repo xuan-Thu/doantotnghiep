@@ -1,7 +1,5 @@
 @extends('frontend.layouts.master')
-
 @section('title','Order Track Page')
-
 @section('main-content')
     <!-- Breadcrumbs -->
     <div class="breadcrumbs">

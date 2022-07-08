@@ -17,7 +17,6 @@
 		</div>
 	</div>
 	<!-- End Breadcrumbs -->
-
 	<!-- Shopping Cart -->
 	<div class="shopping-cart section">
 		<div class="container">
@@ -55,12 +54,9 @@
 								<tr>
 									<td class="text-center">
 										There are no any wishlist available. <a href="{{route('product-grids')}}" style="color:blue;">Continue shopping</a>
-
 									</td>
 								</tr>
 							@endif
-
-
 						</tbody>
 					</table>
 					<!--/ End Shopping Summery -->
@@ -69,7 +65,6 @@
 		</div>
 	</div>
 	<!--/ End Shopping Cart -->
-
 	<!-- Start Shop Services Area  -->
 	<section class="shop-services section">
 		<div class="container">
@@ -114,11 +109,7 @@
 		</div>
 	</section>
 	<!-- End Shop Newsletter -->
-
 	@include('frontend.layouts.newsletter')
-
-
-
 	<!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -208,8 +199,7 @@
                 </div>
             </div>
         </div>
-        <!-- Modal end -->
-
+    <!-- Modal end -->
 @endsection
 @push('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
