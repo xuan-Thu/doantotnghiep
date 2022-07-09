@@ -1,16 +1,15 @@
 @extends('backend.layouts.master')
-
 @section('main-content')
  <!-- DataTales Example -->
- <div class="card shadow mb-4">
-     <div class="row">
-         <div class="col-md-12">
+<div class="card shadow mb-4">
+    <div class="row">
+        <div class="col-md-12">
             @include('backend.layouts.notification')
-         </div>
-     </div>
+        </div>
+    </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Post Lists</h6>
-      <a href="{{route('post.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Post</a>
+        <h6 class="m-0 font-weight-bold text-primary float-left">Post Lists</h6>
+        <a href="{{route('post.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Post</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -41,20 +40,17 @@
             </tr>
           </tfoot>
           <tbody>
-
             @foreach($posts as $post)
               @php
               $author_info=DB::table('users')->select('name')->where('id',$post->added_by)->get();
               // dd($sub_cat_info);
               // dd($author_info);
-
               @endphp
                 <tr>
                     <td>{{$post->id}}</td>
                     <td>{{$post->title}}</td>
                     <td>{{$post->cat_info->title}}</td>
                     <td>{{$post->tags}}</td>
-
                     <td>
                       @foreach($author_info as $data)
                           {{$data->name}}
@@ -94,35 +90,29 @@
     </div>
 </div>
 @endsection
-
 @push('styles')
   <link href="{{asset('backend/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
   <style>
-      div.dataTables_wrapper div.dataTables_paginate{
-          display: none;
-      }
-      .zoom {
+    div.dataTables_wrapper div.dataTables_paginate{
+        display: none;
+    }
+    .zoom {
         transition: transform .2s; /* Animation */
-      }
-
-      .zoom:hover {
+    }
+    .zoom:hover {
         transform: scale(5);
-      }
+    }
   </style>
 @endpush
-
 @push('scripts')
-
   <!-- Page level plugins -->
   <script src="{{asset('backend/vendor/datatables/jquery.dataTables.min.js')}}"></script>
   <script src="{{asset('backend/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-
   <!-- Page level custom scripts -->
   <script src="{{asset('backend/js/demo/datatables-demo.js')}}"></script>
   <script>
-
       $('#product-dataTable').DataTable( {
             "columnDefs":[
                 {
@@ -131,11 +121,8 @@
                 }
             ]
         } );
-
         // Sweet alert
-
         function deleteData(id){
-
         }
   </script>
   <script>
@@ -146,24 +133,24 @@
             }
         });
           $('.dltBtn').click(function(e){
-              var form=$(this).closest('form');
-              var dataID=$(this).data('id');
-              // alert(dataID);
-              e.preventDefault();
-              swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this data!",
-                    icon: "warning",
-                    buttons: true,
-                    dangerMode: true,
-                })
-                .then((willDelete) => {
-                    if (willDelete) {
-                       form.submit();
-                    } else {
-                        swal("Your data is safe!");
-                    }
-                });
+            var form=$(this).closest('form');
+            var dataID=$(this).data('id');
+            // alert(dataID);
+            e.preventDefault();
+            swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this data!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    form.submit();
+                } else {
+                    swal("Your data is safe!");
+                }
+            });
           })
       })
   </script>

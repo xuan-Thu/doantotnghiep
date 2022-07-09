@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','E-TECH || Blog Detail page')
+@section('title','Blog Detail page')
 @section('main-content')
     <!-- Breadcrumbs -->
     <div class="breadcrumbs">
@@ -25,15 +25,26 @@
                     <div class="blog-single-main">
                         <div class="row">
                             <div class="col-12">
-                                <div class="image">
-                                    <img src="{{$post->photo}}" alt="{{$post->photo}}">
-                                </div>
                                 <div class="blog-detail">
                                     <h2 class="blog-title">{{$post->title}}</h2>
                                     <div class="blog-meta">
-                                        <span class="author"><a href="javascript:void(0);"><i class="fa fa-user"></i>By {{$post->author_info['name']}}</a><a href="javascript:void(0);"><i class="fa fa-calendar"></i>{{$post->created_at->format('M d, Y')}}</a><a href="javascript:void(0);"><i class="fa fa-comments"></i>Comment ({{$post->allComments->count()}})</a></span>
+                                        <span class="author">
+                                            <a href="javascript:void(0);">
+                                                <i class="fa fa-user"></i>By {{$post->author_info['name']}}
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <i class="fa fa-calendar"></i>{{$post->created_at->format('M d, Y')}}
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <i class="fa fa-comments"></i>Comment ({{$post->allComments->count()}})
+                                            </a>
+                                        </span>
                                     </div>
                                     <div class="sharethis-inline-reaction-buttons"></div>
+                                    <p>{!! html_entity_decode($post->summary) !!}</p>
+                                    <div class="image">
+                                        <img src="{{$post->photo}}" alt="{{$post->photo}}">
+                                    </div>
                                     <div class="content">
                                         @if($post->quote)
                                         <blockquote> <i class="fa fa-quote-left"></i> {!! ($post->quote) !!}</blockquote>
