@@ -199,9 +199,9 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 var ctx = document.getElementById("myAreaChart");
 
 axios.get(url)
-            .then(function (response) {
-              const data_keys = Object.keys(response.data);
-              const data_values = Object.values(response.data);
+  .then(function (response) {
+    const data_keys = Object.keys(response.data);
+    const data_values = Object.values(response.data);
 
 
 var myLineChart = new Chart(ctx, {
@@ -291,26 +291,10 @@ var myLineChart = new Chart(ctx, {
     }
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-            })
-            .catch(function (error) {
-            //   vm.answer = 'Error! Could not reach the API. ' + error
-            console.log(error)
-            });
-
-
-
-
-
+  })
+  .catch(function (error) {
+  //   vm.answer = 'Error! Could not reach the API. ' + error
+  console.log(error)
+  });
   </script>
 @endpush

@@ -100,13 +100,13 @@ class AdminController extends Controller
         ->groupBy('day_name','day')
         ->orderBy('day')
         ->get();
-     $array[] = ['Name', 'Number'];
-     foreach($data as $key => $value)
-     {
-       $array[++$key] = [$value->day_name, $value->count];
-     }
+        $array[] = ['Name', 'Number'];
+        foreach($data as $key => $value)
+        {
+            $array[++$key] = [$value->day_name, $value->count];
+        }
     //  return $data;
-     return view('backend.index')->with('course', json_encode($array));
+        return view('backend.index')->with('course', json_encode($array));
     }
 
     // public function activity(){
