@@ -1,9 +1,6 @@
 @extends('frontend.layouts.master')
-
 @section('title','About Us')
-
 @section('main-content')
-
 	<!-- Breadcrumbs -->
 	<div class="breadcrumbs">
 		<div class="container">
@@ -20,7 +17,6 @@
 		</div>
 	</div>
 	<!-- End Breadcrumbs -->
-
 	<!-- About Us -->
 	<section class="about-us section">
 			<div class="container">
@@ -50,8 +46,6 @@
 			</div>
 	</section>
 	<!-- End About Us -->
-
-
 	<!-- Start Shop Services Area -->
 	<section class="shop-services section">
 		<div class="container">
@@ -96,6 +90,5 @@
 		</div>
 	</section>
 	<!-- End Shop Services Area -->
-
 	@include('frontend.layouts.newsletter')
 @endsection

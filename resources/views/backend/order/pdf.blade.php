@@ -69,18 +69,6 @@
     padding: .30rem;
   }
 </style>
-  <div class="invoice-header">
-    <div class="float-left site-logo">
-      <img src="{{asset('backend/img/logo.png')}}" alt="">
-    </div>
-    <div class="float-right site-address">
-      <h4>{{env('APP_NAME')}}</h4>
-      <p>{{env('APP_ADDRESS')}}</p>
-      <p>Phone: <a href="tel:{{env('APP_PHONE')}}">{{env('APP_PHONE')}}</a></p>
-      <p>Email: <a href="mailto:{{env('APP_EMAIL')}}">{{env('APP_EMAIL')}}</a></p>
-    </div>
-    <div class="clearfix"></div>
-  </div>
   <div class="invoice-description">
     <div class="invoice-left-top float-left">
       <h6>Invoice to</h6>
@@ -119,7 +107,7 @@
       </thead>
       <tbody>
       @foreach($order->cart_info as $cart)
-      @php 
+      @php
         $product=DB::table('products')->select('title')->where('id',$cart->product_id)->get();
       @endphp
         <tr>

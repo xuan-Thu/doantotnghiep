@@ -9,7 +9,6 @@
                         <ul class="list-main">
                             @php
                                 $settings=DB::table('settings')->get();
-
                             @endphp
                             <li><i class="ti-headphone-alt"></i>@foreach($settings as $data) {{$data->phone}} @endforeach</li>
                             <li><i class="ti-email"></i> @foreach($settings as $data) {{$data->email}} @endforeach</li>
@@ -30,7 +29,6 @@
                                     <li><i class="ti-user"></i> <a href="{{route('user')}}"  target="_blank">Dashboard</a></li>
                                 @endif
                                 <li><i class="ti-power-off"></i> <a href="{{route('user.logout')}}">Logout</a></li>
-
                             @else
                                 <li><i class="ti-power-off"></i><a href="{{route('login.form')}}">Login /</a> <a href="{{route('register.form')}}">Register</a></li>
                             @endauth
@@ -47,7 +45,7 @@
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-12">
                     <!-- Logo -->
-                    <div class="logo">
+                    <div class="logo" style="margin-top: 0px;">
                         @php
                             $settings=DB::table('settings')->get();
                         @endphp
@@ -194,7 +192,6 @@
                                             <li class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif"><a href="{{route('product-grids')}}">Products</a><span class="new">New</span></li>
                                                 {{Helper::getHeaderCategory()}}
                                             <li class="{{Request::path()=='blog' ? 'active' : ''}}"><a href="{{route('blog')}}">Blog</a></li>
-
                                             <li class="{{Request::path()=='contact' ? 'active' : ''}}"><a href="{{route('contact')}}">Contact Us</a></li>
                                         </ul>
                                     </div>

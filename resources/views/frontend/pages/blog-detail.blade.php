@@ -1,7 +1,5 @@
 @extends('frontend.layouts.master')
-
-@section('title','E-TECH || Blog Detail page')
-
+@section('title','Blog Detail page')
 @section('main-content')
     <!-- Breadcrumbs -->
     <div class="breadcrumbs">
@@ -19,7 +17,6 @@
         </div>
     </div>
     <!-- End Breadcrumbs -->
-
     <!-- Start Blog Single -->
     <section class="blog-single section">
         <div class="container">
@@ -28,15 +25,26 @@
                     <div class="blog-single-main">
                         <div class="row">
                             <div class="col-12">
-                                <div class="image">
-                                    <img src="{{$post->photo}}" alt="{{$post->photo}}">
-                                </div>
                                 <div class="blog-detail">
                                     <h2 class="blog-title">{{$post->title}}</h2>
                                     <div class="blog-meta">
-                                        <span class="author"><a href="javascript:void(0);"><i class="fa fa-user"></i>By {{$post->author_info['name']}}</a><a href="javascript:void(0);"><i class="fa fa-calendar"></i>{{$post->created_at->format('M d, Y')}}</a><a href="javascript:void(0);"><i class="fa fa-comments"></i>Comment ({{$post->allComments->count()}})</a></span>
+                                        <span class="author">
+                                            <a href="javascript:void(0);">
+                                                <i class="fa fa-user"></i>By {{$post->author_info['name']}}
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <i class="fa fa-calendar"></i>{{$post->created_at->format('M d, Y')}}
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <i class="fa fa-comments"></i>Comment ({{$post->allComments->count()}})
+                                            </a>
+                                        </span>
                                     </div>
                                     <div class="sharethis-inline-reaction-buttons"></div>
+                                    <p>{!! html_entity_decode($post->summary) !!}</p>
+                                    <div class="image">
+                                        <img src="{{$post->photo}}" alt="{{$post->photo}}">
+                                    </div>
                                     <div class="content">
                                         @if($post->quote)
                                         <blockquote> <i class="fa fa-quote-left"></i> {!! ($post->quote) !!}</blockquote>
@@ -102,14 +110,10 @@
                                     </div>
                                 </div>
                             </div>
-
                             @else
                             <p class="text-center p-5">
                                 You need to <a href="{{route('login.form')}}" style="color:rgb(54, 54, 204)">Login</a> OR <a style="color:blue" href="{{route('register.form')}}">Register</a> for comment.
-
                             </p>
-
-
                             <!--/ End Form -->
                             @endauth
                             <div class="col-12">
@@ -207,43 +211,33 @@
 @push('scripts')
 <script>
 $(document).ready(function(){
-
     (function($) {
         "use strict";
-
         $('.btn-reply.reply').click(function(e){
             e.preventDefault();
             $('.btn-reply.reply').show();
-
             $('.comment_btn.comment').hide();
             $('.comment_btn.reply').show();
-
             $(this).hide();
             $('.btn-reply.cancel').hide();
             $(this).siblings('.btn-reply.cancel').show();
-
             var parent_id = $(this).data('id');
             var html = $('#commentForm');
             $( html).find('#parent_id').val(parent_id);
             $('#commentFormContainer').hide();
             $(this).parents('.comment-list').append(html).fadeIn('slow').addClass('appended');
           });
-
         $('.comment-list').on('click','.btn-reply.cancel',function(e){
             e.preventDefault();
             $(this).hide();
             $('.btn-reply.reply').show();
-
             $('.comment_btn.reply').hide();
             $('.comment_btn.comment').show();
-
             $('#commentFormContainer').show();
             var html = $('#commentForm');
             $( html).find('#parent_id').val('');
-
             $('#commentFormContainer').append(html);
         });
-
  })(jQuery)
 })
 </script>

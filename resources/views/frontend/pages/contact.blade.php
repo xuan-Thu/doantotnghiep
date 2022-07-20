@@ -1,5 +1,4 @@
 @extends('frontend.layouts.master')
-
 @section('main-content')
 	<!-- Breadcrumbs -->
 	<div class="breadcrumbs">
@@ -17,7 +16,6 @@
 		</div>
 	</div>
 	<!-- End Breadcrumbs -->
-  
 	<!-- Start Contact -->
 	<section id="contact-us" class="contact-us section">
 		<div class="container">
@@ -51,13 +49,13 @@
 											<div class="form-group">
 												<label>Your Email<span>*</span></label>
 												<input name="email" type="email" id="email" placeholder="Enter email address">
-											</div>	
+											</div>
 										</div>
 										<div class="col-lg-6 col-12">
 											<div class="form-group">
 												<label>Your Phone<span>*</span></label>
 												<input id="phone" name="phone" type="number" placeholder="Enter your phone">
-											</div>	
+											</div>
 										</div>
 										<div class="col-12">
 											<div class="form-group message">
@@ -104,7 +102,6 @@
 			</div>
 	</section>
 	<!--/ End Contact -->
-	
 	<!-- Map Section -->
 	<div class="map-section">
 		<div id="myMap">
@@ -112,7 +109,6 @@
 		</div>
 	</div>
 	<!--/ End Map Section -->
-	
 	<!-- Start Shop Newsletter  -->
 	@include('frontend.layouts.newsletter')
 	<!-- End Shop Newsletter -->
@@ -132,7 +128,6 @@
 		  </div>
 		</div>
 	</div>
-	
 	<!-- Modals error -->
 	<div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -150,7 +145,6 @@
 		</div>
 	</div>
 @endsection
-
 @push('styles')
 <style>
 	.modal-dialog .modal-content .modal-header{

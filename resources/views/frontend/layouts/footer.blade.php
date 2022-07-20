@@ -74,7 +74,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-12">
 							<div class="left">
-								<p>Copyright © {{date('Y')}} <a href="https://github.com/Prajwal100" target="_blank">Prajwal Rai</a>  -  All Rights Reserved.</p>
+								<p>Copyright © {{date('Y')}} XuanThu.</p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-12">
@@ -88,7 +88,6 @@
 		</div>
 	</footer>
 	<!-- /End Footer Area -->
- 
 	<!-- Jquery -->
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
     <script src="{{asset('frontend/js/jquery-migrate-3.0.0.js')}}"></script>
@@ -121,11 +120,8 @@
 	<script src="{{asset('frontend/js/isotope/isotope.pkgd.min.js')}}"></script>
 	<!-- Easing JS -->
 	<script src="{{asset('frontend/js/easing.js')}}"></script>
-
 	<!-- Active JS -->
 	<script src="{{asset('frontend/js/active.js')}}"></script>
-
-	
 	@stack('scripts')
 	<script>
 		setTimeout(function(){
@@ -138,17 +134,13 @@
 			$("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
 				event.preventDefault();
 				event.stopPropagation();
-
 				$(this).siblings().toggleClass("show");
-
-
 				if (!$(this).next().hasClass('show')) {
 				$(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
 				}
 				$(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
 				$('.dropdown-submenu .show').removeClass("show");
 				});
-
 			});
 		});
-	  </script>
+	</script>

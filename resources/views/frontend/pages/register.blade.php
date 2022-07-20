@@ -1,7 +1,5 @@
 @extends('frontend.layouts.master')
-
 @section('title','Register Page')
-
 @section('main-content')
 	<!-- Breadcrumbs -->
     <div class="breadcrumbs">
@@ -19,7 +17,6 @@
         </div>
     </div>
     <!-- End Breadcrumbs -->
-
     <!-- Shop Login -->
     <section class="shop login section">
         <div class="container">
@@ -88,7 +85,6 @@
     </section>
     <!--/ End Login -->
 @endsection
-
 @push('styles')
 <style>
     .shop.login .form .btn{
