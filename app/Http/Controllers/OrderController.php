@@ -90,7 +90,7 @@ class OrderController extends Controller
 
         $order=new Order();
         $order_data=$request->all();
-        $order_data['order_number']='ORD-'.strtoupper(Str::random(10));
+        $order_data['order_number']='ORD-'.strtoupper(Str::random(5));
         $order_data['user_id']=$request->user()->id;
         $order_data['shipping_id']=$request->shipping;
         $shipping=Shipping::where('id',$order_data['shipping_id'])->pluck('price');
