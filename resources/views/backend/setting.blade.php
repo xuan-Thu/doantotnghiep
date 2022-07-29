@@ -31,10 +31,9 @@
               <i class="fa fa-picture-o"></i> Choose
             </a>
           </span>
+          <input id="thumbnail1" class="form-control" type="text" name="logo" value="{{$data->logo}}">
         </div>
-        <input id="thumbnail1" class="form-control" type="text" name="logo" value="{{$data->logo}}">
-      </div>
-      <div id="holder1" style="margin-top:15px;max-height:100px;"></div>
+        <div id="holder1" style="margin-top:15px;max-height:100px;"></div>
         @error('logo')
           <span class="text-danger">{{$message}}</span>
         @enderror
@@ -47,10 +46,9 @@
               <i class="fa fa-picture-o"></i> Choose
             </a>
           </span>
+          <input id="thumbnail" class="form-control" type="text" name="photo" value="{{$data->photo}}">
         </div>
-        <input id="thumbnail" class="form-control" type="text" name="photo" value="{{$data->photo}}">
-      </div>
-      <div id="holder" style="margin-top:15px;max-height:100px;"></div>
+        <div id="holder" style="margin-top:15px;max-height:100px;"></div>
         @error('photo')
           <span class="text-danger">{{$message}}</span>
         @enderror
