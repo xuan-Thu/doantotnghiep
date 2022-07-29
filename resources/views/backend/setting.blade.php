@@ -38,7 +38,7 @@
           <span class="text-danger">{{$message}}</span>
         @enderror
       </div>
-      {{-- <div class="form-group">
+      <div class="form-group" hidden>
         <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
         <div class="input-group">
           <span class="input-group-btn">
@@ -52,7 +52,7 @@
         @error('photo')
           <span class="text-danger">{{$message}}</span>
         @enderror
-      </div> --}}
+      </div>
       <div class="form-group">
         <label for="address" class="col-form-label">Address <span class="text-danger">*</span></label>
         <input type="text" class="form-control" name="address" required value="{{$data->address}}">
