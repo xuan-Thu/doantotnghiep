@@ -105,7 +105,7 @@
 	<!-- Map Section -->
 	<div class="map-section">
 		<div id="myMap">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14130.857353934944!2d85.36529494999999!3d27.6952226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sne!2snp!4v1595323330171!5m2!1sne!2snp" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2736.0743866502658!2d105.78657096916595!3d21.063769909172155!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aad405eda68d%3A0x5c95cd9efd03a0ca!2zQ8O0bmcgdmnDqm4gSMOyYSBCw6xuaA!5e0!3m2!1svi!2s!4v1659156845738!5m2!1svi!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		</div>
 	</div>
 	<!--/ End Map Section -->
