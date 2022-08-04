@@ -98,8 +98,8 @@
             </a>
           </span>
           <input id="thumbnail" class="form-control" type="text" name="photo" value="{{old('photo')}}">
-          <div id="holder" style="margin-top:15px;max-height:100px;"></div>
         </div>
+        <div id="holder" style="margin-top:15px;max-height:100px;"></div>
         @error('photo')
           <span class="text-danger">{{$message}}</span>
         @enderror

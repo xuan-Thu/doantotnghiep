@@ -112,7 +112,7 @@
                                                 $photo=explode(',',$product->photo);
                                             // dd($photo);
                                             @endphp
-                                            <img class="default-img" style="max-width:260px; max-height:260px;" src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                                            <img class="default-img" style="max-width:260px; max-height:260px; min-height:260px;" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                             <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                             @if($product->stock<=0)
                                                 <span class="out-of-stock">Sale out</span>
