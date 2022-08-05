@@ -33,6 +33,13 @@ class Product extends Model
         }
         return 0;
     }
+    public static function countStockProduct(){
+        $data1=Product::select(\DB::raw("COUNT(*) as count"))-> where('stock','<=','5')->count();
+        if($data1){
+            return $data1;
+        }
+        return 0;
+    }
 
     public function carts(){
         return $this->hasMany(Cart::class)->whereNotNull('order_id');

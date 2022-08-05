@@ -20,6 +20,13 @@ class Order extends Model
         }
         return 0;
     }
+    public static function countStatusOrder(){
+        $data1=Order::select(\DB::raw("COUNT(*) as count"))-> where('status','=','new')->count();
+        if($data1){
+            return $data1;
+        }
+        return 0;
+    }
     public function cart(){
         return $this->hasMany(Cart::class);
     }

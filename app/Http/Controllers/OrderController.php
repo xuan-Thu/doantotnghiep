@@ -304,4 +304,29 @@ class OrderController extends Controller
         }
         return $data;
     }
+    public function incomeChart1(Request $request){
+        $year=\Carbon\Carbon::now()->year;
+        // dd($year);
+        $items=Order::with(['cart_info'])->whereYear('created_at',$year)->where('status','delivered')->get()
+            ->groupBy(function($d){
+                return \Carbon\Carbon::parse($d->created_at)->format('d');
+            });
+            // dd($items);
+        $result=[];
+        foreach($items as $day=>$item_collections){
+            foreach($item_collections as $item){
+                $amount=$item->cart_info->sum('amount');
+                // dd($amount);
+                $m=floatval($day);
+                // return $m;
+                isset($result[$m]) ? $result[$m] += $amount :$result[$m]=$amount;
+            }
+        }
+        $data=[];
+        for($i=1; $i <=7; $i++){
+            $dayName=date('F', mktime(0,0,0,$i,1));
+            $data[$dayName] = (!empty($result[$i]))? number_format((float)($result[$i]), 2, '.', '') : 0.0;
+        }
+        return $data;
+    }
 }
