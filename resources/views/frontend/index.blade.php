@@ -183,7 +183,7 @@
                                         $photo=explode(',',$product->photo);
                                     // dd($photo);
                                     @endphp
-                                    <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                                    <img class="default-img" style="max-width:260px; max-height:260px; min-height:260px;" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                     <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                     {{-- <span class="out-of-stock">Hot</span> --}}
                                 </a>
@@ -245,7 +245,7 @@
                                             $photo=explode(',',$product->photo);
                                             // dd($photo);
                                         @endphp
-                                        <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                                        <img src="{{$photo[0]}}" alt="{{$photo[0]}}" style="max-width:260px; max-height:170px; min-height:170px;">
                                         <a href="{{route('add-to-cart',$product->slug)}}" class="buy"><i class="fa fa-shopping-bag"></i></a>
                                     </div>
                                 </div>

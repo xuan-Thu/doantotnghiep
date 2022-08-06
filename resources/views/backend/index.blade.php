@@ -133,12 +133,12 @@
       </div>
       <div class="month6 select" class="chartCard" style="width: 100%; height: 450px; display: none; align-items: center; justify-content: center;">
         <div class="chartBox" style="width: 95%; height: 95%; border-radius: 20px; border: solid 3px rgb(48, 25, 180); background: white;">
-          <canvas id="pieChart1"></canvas>
+          <canvas id="pieChart2"></canvas>
         </div>
       </div>
       <div class="month7 select" class="chartCard" style="width: 100%; height: 450px; display: none; align-items: center; justify-content: center;">
         <div class="chartBox" style="width: 95%; height: 95%; border-radius: 20px; border: solid 3px rgb(48, 25, 180); background: white;">
-          <canvas id="pieChart2"></canvas>
+          <canvas id="pieChart3"></canvas>
         </div>
       </div>
     </div>
@@ -416,7 +416,7 @@
       labels: ["New", "Proccess", "Delevery", "Cancel"],
       datasets: [{
         label: 'Earnings',
-        data: [],
+        data: [0],
         backgroundColor: [
           'rgb(105, 175, 167)',
           'rgb(244, 161, 204)',
@@ -450,7 +450,7 @@
       labels: ["New", "Proccess", "Delevery", "Cancel"],
       datasets: [{
         label: 'Earnings',
-        data: [0, 0, 47.7, 0],
+        data: [0, 0, 0, 0],
         backgroundColor: [
           'rgb(28, 253, 133)',
           'rgb(60, 73, 222)',
@@ -477,6 +477,40 @@
     const pieChart2 = new Chart(
       document.getElementById('pieChart2'),
       configpie2
+    );
+  </script>
+  <script>{{-- piechart3 --}}
+    const datapie3 = {
+      labels: ["New", "Proccess", "Delevery", "Cancel"],
+      datasets: [{
+        label: 'Earnings',
+        data: [0, 0, 0, 0],
+        backgroundColor: [
+          'rgb(28, 253, 133)',
+          'rgb(60, 73, 222)',
+          'rgb(90, 57, 113)',
+          'rgb(154, 111, 175)',
+        ],
+        borderColor: [
+          'rgb(28, 253, 133)',
+          'rgb(60, 73, 222)',
+          'rgb(90, 57, 113)',
+          'rgb(154, 111, 175)',
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    // config 
+    const configpie3 = {
+      type: 'pie',
+      data: datapie3,
+      options: {}
+    };
+
+    const pieChart3 = new Chart(
+      document.getElementById('pieChart3'),
+      configpie3
     );
   </script>
   <script>{{-- linechart --}}
