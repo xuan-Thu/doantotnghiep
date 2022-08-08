@@ -309,7 +309,7 @@ class OrderController extends Controller
         // dd($year);
         $items=Order::with(['cart_info'])->whereYear('created_at',$year)->where('status','delivered')->get()
             ->groupBy(function($d){
-                return \Carbon\Carbon::parse($d->created_at)->format('d');
+                return \Carbon\Carbon::parse($d->created_at)->format('w');
             });
             // dd($items);
         $result=[];

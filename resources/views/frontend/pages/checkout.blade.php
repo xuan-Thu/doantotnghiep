@@ -193,7 +193,7 @@
                                     <div class="checkbox">
                                         {{-- <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Check Payments</label> --}}
                                         <form-group>
-                                            <input name="payment_method" type="radio" value="cod"> <label> Cash On Delivery</label><br>
+                                            <input name="payment_method" type="radio" value="cod" checked> <label> Cash On Delivery</label><br>
                                             <input name="payment_method" type="radio" value="cod"> <label> PayPal</label>
                                         </form-group>
                                     </div>
