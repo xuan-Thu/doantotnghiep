@@ -22,6 +22,10 @@
             <th>Coupon Code</th>
             <th>Type</th>
             <th>Value</th>
+            <th>Quantity</th>
+            <th>Start</th>
+            <th>End1</th>
+            <th>End2</th>
             <th>Status</th>
             <th>Action</th>
           </tr>
@@ -32,6 +36,10 @@
             <th>Coupon Code</th>
             <th>Type</th>
             <th>Value</th>
+            <th>Quantity</th>
+            <th>Start</th>
+            <th>End1</th>
+            <th>End2</th>
             <th>Status</th>
             <th>Action</th>
           </tr>
@@ -53,7 +61,12 @@
                   ${{number_format($coupon->value,2)}}
                 @else
                   {{$coupon->value}}%
-                @endif</td>
+                @endif
+              </td>
+              <td>{{$coupon->slug}}</td>
+              <td>{{date('d-m-Y', strtotime($coupon->start))}}</td>
+              <td>{{date('d-m-Y', strtotime($coupon->end1))}}</td>
+              <td>{{date('d-m-Y', strtotime($coupon->end2))}}</td>
               <td>
                 @if($coupon->status=='active')
                   <span class="badge badge-success">{{$coupon->status}}</span>

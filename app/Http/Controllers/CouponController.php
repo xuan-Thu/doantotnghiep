@@ -40,6 +40,10 @@ class CouponController extends Controller
             'code'=>'string|required',
             'type'=>'required|in:fixed,percent',
             'value'=>'required|numeric',
+            'slug'=>'required|string',
+            'start'=>'required|date',
+            'end1'=>'required|date',
+            'end2'=>'required|date',
             'status'=>'required|in:active,inactive'
         ]);
         $data=$request->all();
@@ -94,6 +98,10 @@ class CouponController extends Controller
             'code'=>'string|required',
             'type'=>'required|in:fixed,percent',
             'value'=>'required|numeric',
+            'slug'=>'required|string',
+            'start'=>'required|date',
+            'end1'=>'required|date',
+            'end2'=>'required|date',
             'status'=>'required|in:active,inactive'
         ]);
         $data=$request->all();

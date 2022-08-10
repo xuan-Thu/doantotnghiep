@@ -32,6 +32,34 @@
         @enderror
       </div>
       <div class="form-group">
+        <label for="inputTitle" class="col-form-label">Slug <span class="text-danger">*</span></label>
+        <input id="inputTitle" type="number" name="slug" placeholder="Enter Coupon Slug"  value="{{old('value')}}" class="form-control">
+        @error('slug')
+        <span class="text-danger">{{$message}}</span>
+        @enderror
+      </div>
+      <div class="form-group">
+        <label for="inputTitle" class="col-form-label">Start <span class="text-danger">*</span></label>
+        <input id="inputTitle" type="date" name="start" placeholder="Enter Coupon Start"  value="{{old('value')}}" class="form-control">
+        @error('start')
+        <span class="text-danger">{{$message}}</span>
+        @enderror
+      </div>
+      <div class="form-group">
+        <label for="inputTitle" class="col-form-label">End1 <span class="text-danger">*</span></label>
+        <input id="inputTitle" type="date" name="end1" placeholder="Enter Coupon End1"  value="{{old('value')}}" class="form-control">
+        @error('end1')
+        <span class="text-danger">{{$message}}</span>
+        @enderror
+      </div>
+      <div class="form-group">
+        <label for="inputTitle" class="col-form-label">End2 <span class="text-danger">*</span></label>
+        <input id="inputTitle" type="date" name="end2" placeholder="Enter Coupon End2"  value="{{old('value')}}" class="form-control">
+        @error('end2')
+        <span class="text-danger">{{$message}}</span>
+        @enderror
+      </div>
+      <div class="form-group">
         <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
         <select name="status" class="form-control">
           <option value="active">Active</option>

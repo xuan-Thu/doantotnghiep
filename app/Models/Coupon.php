@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Coupon extends Model
 {
-    protected $fillable=['code','type','value','status'];
+    protected $fillable=['code','type','value','slug','start','end1','end2','status'];
 
     public static function findByCode($code){
         return self::where('code',$code)->first();
