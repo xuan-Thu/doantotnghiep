@@ -48,6 +48,7 @@
               <td>{{$order->id}}</td>
               <td>{{$order->order_number}}</td>
               <td>{{$order->first_name}} {{$order->last_name}}</td>
+              <td>{{$order->address1}} {{$order->country}}</td>
               <td>{{$order->email}}</td>
               <td>{{$order->quantity}}</td>
               <td>${{number_format($order->sub_total,2)}}</td>
