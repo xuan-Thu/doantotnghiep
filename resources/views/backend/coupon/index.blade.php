@@ -24,8 +24,8 @@
             <th>Value</th>
             <th>Quantity</th>
             <th>Start</th>
-            <th>End1</th>
-            <th>End2</th>
+            <th>Expected ending</th>
+            <th>End</th>
             <th>Status</th>
             <th>Action</th>
           </tr>
@@ -38,8 +38,8 @@
             <th>Value</th>
             <th>Quantity</th>
             <th>Start</th>
-            <th>End1</th>
-            <th>End2</th>
+            <th>Expected ending</th>
+            <th>End</th>
             <th>Status</th>
             <th>Action</th>
           </tr>

@@ -46,14 +46,14 @@
         @enderror
       </div>
       <div class="form-group">
-        <label for="inputTitle" class="col-form-label">End1 <span class="text-danger">*</span></label>
+        <label for="inputTitle" class="col-form-label">Expected ending <span class="text-danger">*</span></label>
         <input id="inputTitle" type="date" name="end1" placeholder="Enter Coupon End1"  value="{{old('value')}}" class="form-control">
         @error('end1')
         <span class="text-danger">{{$message}}</span>
         @enderror
       </div>
       <div class="form-group">
-        <label for="inputTitle" class="col-form-label">End2 <span class="text-danger">*</span></label>
+        <label for="inputTitle" class="col-form-label">End <span class="text-danger">*</span></label>
         <input id="inputTitle" type="date" name="end2" placeholder="Enter Coupon End2"  value="{{old('value')}}" class="form-control">
         @error('end2')
         <span class="text-danger">{{$message}}</span>
